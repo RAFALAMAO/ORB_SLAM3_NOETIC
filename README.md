@@ -8,7 +8,7 @@
   >
 </p>
 
-ORBSLAM2 adapted for Ubuntu 20 and ROS Noetic if neccesary.
+ORBSLAM3 adapted for Ubuntu 20 and ROS Noetic if neccesary.
 
 ***NOTE 1: THIS VERSION SAVE POINTS CLOUD MAP AFTER MONOCULAR ROS FINISH, AT PATH WHERE YOU RUN ROS NODE, "CloudMapROS.xyz" AND "KeyFrameTrajectory.txt" FILES. YOU CAN CHANGE THIS AT ORB_SLAM3_NOETIC/Examples/ROS/ORB_SLAM3/src/ros_mono.cc IN LINE 123.***
 
