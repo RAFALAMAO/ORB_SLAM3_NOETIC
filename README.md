@@ -2,8 +2,6 @@
 
 <p align="center">
   <img
-    width="520"
-    height="293"
     src="/images/ORB_SLAM3.gif"
   >
 </p>
