@@ -1,4 +1,4 @@
-# ORB-SLAM3 for ROS Noetic, Ubuntu 20
+# ORB-SLAM3 for ROS Noetic, Ubuntu 20.04
 
 <p align="center">
   <img
@@ -6,7 +6,7 @@
   >
 </p>
 
-ORBSLAM3 adapted for Ubuntu 20 and ROS Noetic if neccesary.
+ORBSLAM3 adapted for Ubuntu 20.04 and ROS Noetic.
 
 # Install modified Pangolin
 I added Pangolin version compatible with Ubuntu 20 and ORB_SLAM3, so, we need to install it.
@@ -18,9 +18,7 @@ I added Pangolin version compatible with Ubuntu 20 and ORB_SLAM3, so, we need to
 * OpenGL (Desktop / ES / ES2)
 
 * Glew
- * (win) built automatically
  * (deb) sudo apt-get install libglew-dev
- * (mac) sudo port install glew
 
 * CMake (for build environment)
  * (win) http://www.cmake.org/cmake/resources/software.html
@@ -45,7 +43,26 @@ I added Pangolin version compatible with Ubuntu 20 and ORB_SLAM3, so, we need to
     * make -j
     * ./HelloPangolin
 
-# Install ORB_SLAM3
+# Compile for ROS
+## Build executibles
+* Build orbslam by running `./build.sh`
+* Set the ros package path 
+  ```bash
+  export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:PATH/ORB_SLAM3/Examples/ROS
+  ```
+* Build ROS executibles by `./build_ros.sh`
+
+
+## Run Node
+* Source the environment 
+  ```bash
+  source Examples/ROS/ORB_SLAM3/build/devel/setup.sh
+  ```
+* Start the node 
+  ```
+  rosrun ORB_SLAM3 Mono_Inertial Vocabulary/ORBvoc.txt Examples/Monocular-Inertial/EuRoC.yaml 
+  ```
+
 I added ORB_SLAM3 version compatible with Ubuntu 20 and ORB_SLAM3, so, for install and use just follow official steps at: https://github.com/UZ-SLAMLab/ORB_SLAM3 (except clone official ORBSLAM3, or you can test it too)
 
 # Test:
